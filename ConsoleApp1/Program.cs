@@ -10,11 +10,9 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            bool g = false;
-            Console.WriteLine("Add meg az első számot");
-            int a = int.Parse(Console.ReadLine());
-            Console.WriteLine("Add meg a második számot");
-            int b = int.Parse(Console.ReadLine());
+            double g;
+            int a = szamotker("Add meg az első számot: ");
+            int b = szamotker("Add meg a második számot:");
             
 
                 Console.WriteLine("+ --- 1 || - --- 2 || * --- 3 || / --- 4");
@@ -25,16 +23,20 @@ namespace ConsoleApp1
             switch (valasztas)
             {
                 case 1:
-                    Console.WriteLine(a+b);
+                    g = a+b;
+                    Console.WriteLine(g);
                     break;
                 case 2:
-                    Console.WriteLine(a-b);
+                    g = a - b;
+                    Console.WriteLine(g);
                     break;
                 case 3:
-                    Console.WriteLine(a*b);
+                    g = a * b;
+                    Console.WriteLine(g);
                     break;
                 case 4:
-                    Console.WriteLine(a/b);
+                    g = a / b;
+                    Console.WriteLine(g);
                     break;
                 default:
                     Console.WriteLine("Nem jó");
@@ -43,6 +45,14 @@ namespace ConsoleApp1
 
             
             Console.ReadKey();
+        }
+
+        private static int szamotker(string szoveg)
+        {
+            int bekertszam;
+            Console.Write(szoveg);
+            bekertszam = int.Parse(Console.ReadLine());
+            return bekertszam;
         }
     }
 }
