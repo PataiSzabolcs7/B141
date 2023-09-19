@@ -10,11 +10,15 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Macska macska = new Macska("Círmos",2.1,"kandúr");
-            Console.WriteLine(macska.halad());
+            List<Emlosok> emlosok = new List<Emlosok>();
 
-            macska.sethangotAd("Meow,Meow,MEOOOWWW");
-            Console.WriteLine(macska);
+            emlosok.Add(new Macska("Círmos",2.1,"kandúr"));
+            emlosok.Add(new Kutya("Yoko", 16, "Kan"));
+            emlosok.Add(new Macska("Szerénke", 1.3, "nőstény"));
+            foreach(var item in emlosok)
+            {
+                Console.WriteLine(item);
+            }
             Console.ReadKey();
         }
     }
