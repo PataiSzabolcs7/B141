@@ -17,7 +17,7 @@ namespace ConsoleApp1
             emlosok.Add(new Macska("Szerénke", 1.3, "nőstény"));
             foreach(var item in emlosok)
             {
-                Console.WriteLine(item);
+                Console.WriteLine($"{item} - {item.faj}");
             }
             Console.ReadKey();
         }
